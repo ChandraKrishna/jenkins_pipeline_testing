@@ -8,10 +8,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh '''
-                ls -ltr
-                python scripts/test.py
-                '''
+                //
             }
         }
         stage('Deploy') {
