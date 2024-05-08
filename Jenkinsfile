@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-                    ls -ltr
+                    pwd
                 '''
             }
         }
@@ -12,12 +12,8 @@ pipeline {
             steps {
                 sh '''
                     ls -ltr
+                    python scripts/test.py
                 '''
-            }
-        }
-        stage('Deploy') {
-            steps {
-                ls -ltr
             }
         }
     }
