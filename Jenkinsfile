@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh '''
                     ls -ltr
-                    python scripts/test.py
+                    python3 scripts/test.py
                 '''
             }
         }
