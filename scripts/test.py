@@ -1,8 +1,7 @@
-print("Testing Pipeline\t...")
-print("\tSuccess\t\t...\n\tHello Krishna\t!!!")
-def returnValueCheck():
-    return 100
+def hello():
+    print("Testing Pipeline for Build Autotrigger via Jenkins file for multi-branch pipeline ...")
+    print("\tSuccess\t\t...\n\tHello Krishna\t!!!")
+    return 0
 
 if __name__ == '__main__':
-    val = returnValueCheck()
-    print (val)
+    hello()
