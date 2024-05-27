@@ -5,3 +5,8 @@ def hello():
 
 if __name__ == '__main__':
     hello()
+
+
+# triggers {
+#         cron('H/5 * * * *')
+#     }
