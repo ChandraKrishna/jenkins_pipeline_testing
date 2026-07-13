@@ -1,16 +1,29 @@
 pipeline {
     agent any
+
     stages {
-        stage('Build') {
+
+        stage('Checkout') {
             steps {
-                sh '''
-                    pwd
-                '''
+                checkout scm
             }
         }
+
+        stage('Build') {
+            steps {
+                bat 'cd'
+            }
+        }
+
         stage('Test') {
             steps {
-                sh 'python3 scripts/test.py'
+                bat 'python scripts\\test.py'
+            }
+        }
+
+        stage('Run JMeter') {
+            steps {
+                bat '"C:\\Users\\erkri\\Workspace\\JMeter_Jenkins\\5.6.3\\bin\\jmeter.bat" -n -t "C:\\Users\\erkri\\Workspace\\JMeter_Jenkins\\localhost.jmx" -l "C:\\Users\\erkri\\Workspace\\JMeter_Jenkins\\localhost_result.jtl"'
             }
         }
     }
